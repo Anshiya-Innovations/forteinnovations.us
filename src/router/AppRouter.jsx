@@ -15,7 +15,7 @@ import CaseStudyDetails from '../pages/CaseStudyDetails/CaseStudyDetails';
 
 const AppRouter = () => {
   return (
-    <Router>
+    <Router basename="/Forte-Innovations/">
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
