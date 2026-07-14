@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Global Styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1b2028;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Heading Defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Section Margins */
+section {
+  padding: var(--section-gap) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+  section {
+    padding: var(--section-gap-tablet) 0;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: var(--section-gap-mobile) 0;
+  }
+}
+
+/* Common Background Glow Effects */
+.glow-bg {
+  position: absolute;
+  pointer-events: none;
+  background: var(--gradient-glow);
+  z-index: 0;
+}
+
+/* Grid & Layout Utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Transition Utilities */
+.hover-scale {
+  transition: var(--transition-smooth);
+}
+.hover-scale:hover {
+  transform: translateY(-5px);
+}
+
+/* Custom styling and z-index safety overrides for the tawk.to chat widget */
+#tawk-min-container,
+.tawk-min-container,
+.tawk-chat-panel,
+#tawk-chat-panel {
+  z-index: 999999 !important;
+}
+
+@media (max-width: 576px) {
+  #tawk-min-container,
+  .tawk-min-container {
+    bottom: 16px !important;
+    right: 16px !important;
+  }
+}
+
+/* Site-wide standardized icon colors matching services2 */
+.commitment-card-icon-img,
+.about-core-icon-img,
+.empower-icon-img,
+.why-choose-icon-img,
+.career-job-icon-img,
+.meta-icon-img,
+.industry-key-icon-img,
+.sap-card-icon-img,
+.service-icon-img,
+.contact-card-icon-box img {
+  filter: invert(47%) sepia(85%) saturate(1923%) hue-rotate(179deg) brightness(96%) contrast(97%) !important;
+}
+
+.commitment-icon-box,
+.about-core-icon-box,
+.empower-icon-box,
+.why-choose-icon-box,
+.career-job-icon-container,
+.contact-card-icon-box,
+.industry-projects-icon-box,
+.sap-projects-icon-box,
+.solutions-card-icon-box,
+.subitem-icon-wrapper {
+  color: #0A96E5 !important;
+}
+
+.subitem-card:hover .subitem-icon-wrapper {
+  background-color: #0A96E5 !important;
+  color: #ffffff !important;
+}
+
+.subitem-link,
+.subitem-card:hover .subitem-title {
+  color: #0A96E5 !important;
+}
+
+/* Global button corner rounding to match mockup */
+button,
+input[type="button"],
+input[type="submit"],
+.btn-primary,
+.btn-outline,
+.btn-apply-now,
+.hero-btn,
+.cta-btn,
+.commitment-card-btn,
+.contact-hero-btn,
+.contact-form-submit-btn,
+.industry-btn-primary,
+.industry-btn-outline,
+.industry-view-all-btn,
+.sap-hero-btn,
+.sap-bottom-cta-btn,
+.solutions-hero-btn,
+.solutions-cta-btn,
+.appointment-back-btn,
+.reviews-arrow-btn,
+.sidebar-cta-btn,
+.cta-btn-primary,
+.cta-btn-secondary,
+.cta-btn-navy,
+.cta-btn-outline,
+.close-btn,
+.appointment-btn {
+  border-radius: 50px !important;
+}
+
+/* Phone input country prefix container & layout */
+.phone-input-container {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+/* Appointment Form Select Override */
+.phone-input-container .appointment-country-select {
+  flex-shrink: 0;
+  width: 110px !important;
+  background-color: #f3f4f6; /* Matching light grey bg */
+  border: none;
+  border-radius: 6px;
+  padding: 14px 28px 14px 16px !important;
+  color: #0c152b;
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.phone-input-container .appointment-country-select:focus {
+  background-color: #e5e7eb;
+}
+
+/* Contact Page Form Select Override */
+.phone-input-container .contact-country-select {
+  flex-shrink: 0;
+  width: 110px !important;
+  background-color: #ffffff; /* Matching white bg */
+  border: 1px solid #cbd5e1; /* Matching border */
+  border-radius: 6px;
+  padding: 14px 28px 14px 16px !important;
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+  transition: var(--transition-fast);
+}
+
+.phone-input-container .contact-country-select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 8px rgba(0, 66, 200, 0.15);
+}
+

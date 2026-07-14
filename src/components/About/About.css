@@ -1,0 +1,169 @@
+.about-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.about-container-full {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.about-section-main-title {
+  text-align: center;
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(2rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  color: #0c152b;
+  margin-bottom: 50px;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+}
+
+.about-grid-content {
+  align-items: center;
+  gap: 60px;
+}
+
+/* Left Column: Boardroom Image */
+.about-image-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-img-boardroom {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.about-img-boardroom:hover {
+  transform: scale(1.01);
+}
+
+/* Right Column: Copywriting content */
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.about-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.7;
+  color: #334155;
+  margin-bottom: 28px;
+}
+
+/* Bullets List styling */
+.about-bullets-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-bullets-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.bullet-marker {
+  color: #00a884; /* Teal green bullet dot as in mockup */
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 800;
+  display: inline-block;
+  margin-top: -3px;
+}
+
+.bullet-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #0c152b;
+  font-weight: 500;
+}
+
+/* Stats Row styling */
+.about-stats-row {
+  display: flex;
+  gap: 60px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.about-stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.about-stat-number {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(3rem, 5vw, 4.2rem);
+  font-weight: 800;
+  color: #0042c8; /* Dark vibrant blue as in mockup */
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.about-stat-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+  white-space: nowrap;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .about-grid-content {
+    gap: 40px;
+  }
+  
+  .about-stats-row {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 0;
+  }
+
+  .about-section-main-title {
+    margin-bottom: 36px;
+  }
+
+  .about-grid-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .about-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .about-bullets-list {
+    align-self: flex-start;
+    text-align: left;
+  }
+
+  .about-stats-row {
+    justify-content: center;
+  }
+}

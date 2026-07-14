@@ -1,0 +1,184 @@
+.reviews-section {
+  position: relative;
+  background-color: #ededed; /* Grey background matching mockup */
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.reviews-container-full {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.reviews-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.reviews-main-title {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(1.4rem, 2.5vw, 1.7rem);
+  font-weight: 700;
+  color: #0D9488; /* Teal color as in mockup */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Sliding Avatars */
+.reviews-avatars-viewport {
+  position: relative;
+  width: 380px; /* viewport large enough to show 5 avatars */
+  height: 90px;
+  margin: 0 auto 30px auto;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Add fading gradients at the edges of the avatar strip */
+  mask-image: linear-gradient(to right, transparent, #fff 20%, #fff 80%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.reviews-avatars-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+.reviews-avatar-dot {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease, border-color 0.5s ease;
+  opacity: 0.65;
+  flex-shrink: 0;
+  border: 3px solid transparent;
+}
+
+.reviews-avatar-dot.active {
+  transform: scale(1.35); /* enlarged active avatar in center */
+  opacity: 1;
+  border-color: #0D9488; /* subtle teal border around active avatar */
+  z-index: 5;
+}
+
+.reviews-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Text Slider & Navigation */
+.reviews-text-slider-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reviews-text-viewport {
+  overflow: hidden;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reviews-text-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
+}
+
+.reviews-text-slide {
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.reviews-quote-text {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #0c152b;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 0 32px 0;
+}
+
+.reviews-author-name {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #0c152b;
+  margin: 0;
+}
+
+/* Navigation Buttons */
+.reviews-arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #1d4ed8; /* Vibrant blue button */
+  color: #ffffff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.25);
+  font-family: 'Outfit', sans-serif;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.reviews-arrow-btn:hover {
+  background-color: #1e40af;
+  transform: translateY(-50%) scale(1.05);
+  box-shadow: 0 6px 18px rgba(29, 78, 216, 0.35);
+}
+
+.reviews-arrow-btn.prev {
+  display: none; /* In the mockup, there is only a Next arrow on the right side */
+  left: 0;
+}
+
+.reviews-arrow-btn.next {
+  right: 0;
+}
+
+/* Slide Arrow inside button */
+.arrow-chevron {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1;
+  display: inline-block;
+  margin-top: -3px;
+  margin-left: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 60px 0;
+  }
+
+  .reviews-text-slider-wrapper {
+    gap: 20px;
+  }
+
+  .reviews-quote-text {
+    font-size: 1.05rem;
+  }
+}

@@ -1,0 +1,127 @@
+.case-study-section {
+  position: relative;
+  background-color: #ffffff;
+  padding: 90px 0;
+  overflow: hidden;
+}
+
+.case-study-header {
+  text-align: left;
+  margin-bottom: 50px;
+  max-width: 800px;
+}
+
+.case-study-main-title {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: clamp(1.8rem, 3.2vw, 2.2rem);
+  font-weight: 700;
+  color: #0D9488; /* Teal color as in mockup */
+  margin-bottom: 12px;
+  letter-spacing: -0.6px;
+  line-height: 1.2;
+}
+
+.case-study-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Grid & Cards */
+.case-study-grid {
+  gap: 30px;
+  width: 100%;
+}
+
+.case-study-card {
+  background-color: #f3f4f6; /* Gray background mockup container */
+  border-radius: 16px;
+  padding: 24px; /* Framed look */
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.case-study-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+.case-study-img-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.case-study-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.case-study-card:hover .case-study-img {
+  transform: scale(1.02);
+}
+
+.case-study-card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.case-study-card-title {
+  font-family: 'Outfit', 'Inter', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #0c152b;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.3px;
+}
+
+.case-study-card-desc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.55;
+  margin: 0 0 20px 0;
+}
+
+.case-study-read-more {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #3b82f6; /* Blue link */
+  transition: color 0.2s ease;
+}
+
+.case-study-card:hover .case-study-read-more {
+  color: #1d4ed8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .case-study-section {
+    padding: 60px 0;
+  }
+  
+  .case-study-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .case-study-card {
+    padding: 20px;
+  }
+  
+  .case-study-img-wrapper {
+    margin-bottom: 16px;
+  }
+}

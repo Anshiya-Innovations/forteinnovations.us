@@ -1,0 +1,63 @@
+import React from 'react';
+import './Services.css';
+
+// Import local cropped service icons
+import icon1 from '../../assets/uploaded-it-consultancy-gear.png';
+import icon2 from '../../assets/service-icon-cyber.png';
+import icon3 from '../../assets/service-icon-backup.png';
+import iconAi from '../../assets/service-icon-ai.png';
+import iconSap from '../../assets/uploaded-sap-icon.png';
+
+const Services = () => {
+  const servicesList = [
+    {
+      icon: icon1,
+      title: "IT Consultancy",
+      description: "Professionally visualize resources via a visual team driven informatics platforms rather than professionals."
+    },
+    {
+      icon: icon2,
+      title: "Cyber Security",
+      description: "Protecting your digital assets with advanced threat detection and mitigation strategies for enterprise safety."
+    },
+    {
+      icon: iconAi,
+      title: "AI Integration & Automation",
+      description: "Integrate AI to automate workflows and enhance decision-making."
+    },
+    {
+      icon: iconSap,
+      title: "SAP BTP",
+      description: "Accelerate business transformation by building, integrating, and extending critical processes on the SAP Business Technology Platform."
+    }
+  ];
+
+  return (
+    <section id="services" className="services-section">
+      <div className="container">
+        <div className="grid-4 services-grid">
+          {servicesList.map((service, index) => (
+            <div key={index} className="service-card">
+              <div className="service-icon-wrapper">
+                <img
+  src={service.icon}
+  alt={service.title}
+  className={`service-icon-img ${
+    service.title === "SAP BTP" ? "sap-service-icon" : ""
+  }`}
+/>
+              </div>
+              <h3 className="service-card-title">{service.title}</h3>
+              <p className="service-card-text">{service.description}</p>
+              <a href="#contact" className="service-card-link">
+                Read More <span className="arrow-icon">&rarr;</span>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Services;
