@@ -1,17 +1,17 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MainLayout from '../layout/MainLayout';
-import Home from '../pages/Home/Home';
-import Contact from '../pages/Contact/Contact';
-import Solutions from '../pages/Solutions/Solutions';
-import SapService from '../pages/SapService/SapService';
-import Industries from '../pages/Industries/Industries';
-import AboutUs from '../pages/AboutUs/AboutUs';
-import Career from '../pages/Career/Career';
-import ServiceDetails from '../pages/ServiceDetails/ServiceDetails';
-import BlogDetails from '../pages/BlogDetails/BlogDetails';
-import NotFound from '../pages/NotFound/NotFound';
-import CaseStudyDetails from '../pages/CaseStudyDetails/CaseStudyDetails';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import MainLayout from "../layout/MainLayout";
+import Home from "../pages/Home/Home";
+import Contact from "../pages/Contact/Contact";
+import Solutions from "../pages/Solutions/Solutions";
+import SapService from "../pages/SapService/SapService";
+import Industries from "../pages/Industries/Industries";
+import AboutUs from "../pages/AboutUs/AboutUs";
+import Career from "../pages/Career/Career";
+import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
+import BlogDetails from "../pages/BlogDetails/BlogDetails";
+import NotFound from "../pages/NotFound/NotFound";
+import CaseStudyDetails from "../pages/CaseStudyDetails/CaseStudyDetails";
 
 const AppRouter = () => {
   return (
