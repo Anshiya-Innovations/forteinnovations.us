@@ -888,8 +888,9 @@
   align-items: center;
   text-align: center;
   background-color: #162444;
-  padding: 60px 40px;
-  min-height: 250px;
+  padding: 70px 40px 90px 40px !important;
+  min-height: auto !important;
+  height: auto !important;
   max-width: 1100px;
   margin: 0 auto;
   border-radius: 20px;
@@ -1035,7 +1036,7 @@
     padding: 60px 0;
   }
   .solutions-cta-banner-container {
-    padding: 50px 24px 60px 24px !important;
+    padding: 50px 24px 80px 24px !important;
     min-height: auto !important;
     height: auto !important;
   }
@@ -1046,7 +1047,7 @@
     grid-template-columns: 1fr;
   }
   .solutions-cta-banner-container {
-    padding: 40px 20px 65px 20px !important;
+    padding: 40px 20px 80px 20px !important;
     min-height: auto !important;
     height: auto !important;
   }

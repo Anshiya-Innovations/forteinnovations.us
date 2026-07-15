@@ -279,7 +279,9 @@
   background: #162444;
   border: none;
   border-radius: 24px;
-  padding: 60px;
+  padding: 70px 40px 90px 40px !important;
+  min-height: auto !important;
+  height: auto !important;
   text-align: center;
   margin-bottom: 75px;
 }
@@ -382,7 +384,7 @@
     grid-template-columns: 1fr;
   }
   .service-details-cta {
-    padding: 40px 20px 65px 20px !important;
+    padding: 40px 20px 80px 20px !important;
     min-height: auto !important;
     height: auto !important;
   }
