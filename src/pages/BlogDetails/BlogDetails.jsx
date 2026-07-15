@@ -184,7 +184,7 @@ const BlogDetails = () => {
               <h3>Need Expert IT Assistance?</h3>
               <p>Schedule a 30-minute deep-dive consultation with our principal technology consultants to map your modernization roadmap.</p>
               <a 
-                href="https://calendly.com/forteinnovations/30min" 
+                href="https://calendly.com/contact-forteinnovations/30min" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="sidebar-cta-btn"

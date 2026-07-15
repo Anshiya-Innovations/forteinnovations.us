@@ -137,7 +137,7 @@ const Career = () => {
                       <span className="meta-text">{job.experience}</span>
                     </div>
                   </div>
-                  <button className="btn-apply-now" onClick={() => window.open('https://calendly.com/forteinnovations/30min', '_blank', 'noopener,noreferrer')}>
+                  <button className="btn-apply-now" onClick={() => window.open('https://calendly.com/contact-forteinnovations/30min', '_blank', 'noopener,noreferrer')}>
                     Apply Now
                     <svg className="apply-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                       <line x1="5" y1="12" x2="19" y2="12"></line>

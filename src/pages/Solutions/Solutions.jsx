@@ -66,7 +66,7 @@ const Solutions = () => {
 
   const handleCtaClick = (buttonText) => {
     if (buttonText === "Get Free Consultation") {
-      window.open("https://calendly.com/forteinnovations/30min", "_blank");
+      window.open("https://calendly.com/contact-forteinnovations/30min", "_blank");
     } else {
       navigate('/contact');
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -94,7 +94,7 @@ const Solutions = () => {
             </p>
             <div className="solutions-hero-actions">
               <button 
-                onClick={() => window.open('https://calendly.com/forteinnovations/30min', '_blank', 'noopener,noreferrer')} 
+                onClick={() => window.open('https://calendly.com/contact-forteinnovations/30min', '_blank', 'noopener,noreferrer')} 
                 className="solutions-hero-btn solutions-hero-btn-primary"
               >
                 Get Started <span className="solutions-arrow">&rarr;</span>
@@ -323,7 +323,7 @@ const Solutions = () => {
           </p>
           <div className="solutions-cta-banner-actions">
             <button 
-              onClick={() => window.open('https://calendly.com/forteinnovations/30min', '_blank', 'noopener,noreferrer')} 
+              onClick={() => window.open('https://calendly.com/contact-forteinnovations/30min', '_blank', 'noopener,noreferrer')} 
               className="solutions-cta-btn solutions-cta-btn-primary"
             >
               Talk to Our Experts

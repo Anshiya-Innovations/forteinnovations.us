@@ -25,7 +25,7 @@ const Hero = ({ onCtaClick }) => {
           </p>
           
           <div className="hero-actions">
-            <button onClick={() => window.open('https://calendly.com/forteinnovations/30min', '_blank', 'noopener,noreferrer')} className="btn-primary hero-btn">
+            <button onClick={() => window.open('https://calendly.com/contact-forteinnovations/30min', '_blank', 'noopener,noreferrer')} className="btn-primary hero-btn">
               Get Free Consultation
             </button>
             <button onClick={() => onCtaClick('services2-section')} className="btn-outline hero-btn">

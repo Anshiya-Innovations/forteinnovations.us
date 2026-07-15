@@ -25,7 +25,7 @@ const SapService = () => {
   const navigate = useNavigate();
 
   const handleGetConsultation = () => {
-    window.open('https://calendly.com/forteinnovations/30min', '_blank', 'noopener,noreferrer');
+    window.open('https://calendly.com/contact-forteinnovations/30min', '_blank', 'noopener,noreferrer');
   };
 
   const handleContactSupport = () => {

@@ -563,14 +563,14 @@ const Navbar = () => {
           </ul>
           
           <div className="navbar-cta-mobile">
-            <button onClick={() => window.open('https://calendly.com/forteinnovations/30min', '_blank', 'noopener,noreferrer')} className="btn-primary">
+            <button onClick={() => window.open('https://calendly.com/contact-forteinnovations/30min', '_blank', 'noopener,noreferrer')} className="btn-primary">
               Get Free Consultation
             </button>
           </div>
         </div>
 
         <div className="navbar-cta">
-          <button onClick={() => window.open('https://calendly.com/forteinnovations/30min', '_blank', 'noopener,noreferrer')} className="btn-primary">
+          <button onClick={() => window.open('https://calendly.com/contact-forteinnovations/30min', '_blank', 'noopener,noreferrer')} className="btn-primary">
             Get in Touch
           </button>
         </div>

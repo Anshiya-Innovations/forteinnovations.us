@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import aboutMeeting from '../../assets/uploaded-about-meeting.png';
+import aboutMeeting from '../../assets/uploaded-about-meeting.jpg';
 import CTA from '../../components/CTA/CTA';
 import aboutMissionRocket from '../../assets/about-mission-rocket.png';
 import aboutVisionEye from '../../assets/about-vision-eye.png';

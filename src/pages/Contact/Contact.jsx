@@ -195,7 +195,7 @@ const Contact = () => {
               <img src={iconLoc} alt="Location Pin Icon" className="contact-card-icon HQicon" />
             </div>
             <h3 className="contact-card-title">Headquarters</h3>
-            <p className="contact-card-desc">Building No. D-52A, Anna Salai, Pammal, Chennai, Chengalpattu, Tamil Nadu 600075, India</p>
+            <p className="contact-card-desc">100 Franklin Square Drive, Somerset, New Jersey - 08873</p>
             <a 
               href="https://maps.google.com" 
               target="_blank" 
