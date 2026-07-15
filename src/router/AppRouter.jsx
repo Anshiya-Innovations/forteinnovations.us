@@ -15,8 +15,9 @@ import CaseStudyDetails from "../pages/CaseStudyDetails/CaseStudyDetails";
 
 const AppRouter = () => {
   return (
-    <Router basename="/">
+    <Router>
       <Routes>
+        <Route path="sitemap.xml" element={null} />
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="contact" element={<Contact />} />
