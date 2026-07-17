@@ -37,7 +37,7 @@
         // Remove event listeners to clean up
         window.removeEventListener('scroll', loadTawk);
         window.removeEventListener('touchstart', loadTawk);
-        clearTimeout(tawkTimeout);
+        window.removeEventListener('mousemove', loadTawk);
 
         var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
         s1.async=true;
@@ -46,12 +46,13 @@
         s0.parentNode.insertBefore(s1,s0);
       }
 
-      var tawkTimeout;
-      // If mobile view, lazy-load Tawk.to on interaction or delay
-      if (window.innerWidth <= 768) {
+      // Check if mobile viewport using matchMedia (no forced reflow)
+      var isMobile = window.matchMedia && window.matchMedia('(max-width: 768px)').matches;
+      if (isMobile) {
+        // Lazy-load on user scroll, touch, or mouse movement
         window.addEventListener('scroll', loadTawk, { passive: true });
         window.addEventListener('touchstart', loadTawk, { passive: true });
-        tawkTimeout = setTimeout(loadTawk, 5000); // 5s fallback
+        window.addEventListener('mousemove', loadTawk, { passive: true });
       } else {
         // Desktop loads immediately
         loadTawk();

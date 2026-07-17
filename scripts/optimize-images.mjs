@@ -8,38 +8,38 @@ const __dirname = path.dirname(__filename);
 const projectRoot = path.join(__dirname, '..');
 
 const images = [
-  { relPath: 'src/assets/uploaded-commitment-team.png', maxWidth: 600 },
-  { relPath: 'src/assets/feature-graphic.png', maxWidth: 600 },
-  { relPath: 'src/assets/about_ai_boardroom.png', maxWidth: 600 },
-  { relPath: 'src/assets/case-studies/cloud_optimization.png', maxWidth: 600 },
-  { relPath: 'src/assets/case-studies/network_security.png', maxWidth: 600 },
-  { relPath: 'src/assets/case-studies/crm_success.png', maxWidth: 600 },
-  { relPath: 'src/assets/case-studies/data_migration.png', maxWidth: 600 },
-  { relPath: 'src/assets/industry/bg/image 5.png', maxWidth: 600 },
-  { relPath: 'src/assets/industry/bg/image 8.png', maxWidth: 600 },
-  { relPath: 'src/assets/industry/bg/image 3.png', maxWidth: 600 },
-  { relPath: 'src/assets/industry/bg/image 4.png', maxWidth: 600 },
-  { relPath: 'src/assets/industry/bg/image 6.png', maxWidth: 600 },
-  { relPath: 'src/assets/industry/bg/image 7.png', maxWidth: 600 },
-  { relPath: 'src/assets/industry/bg/image 10.png', maxWidth: 600 },
-  { relPath: 'src/assets/industry/bg/image 11.png', maxWidth: 600 },
-  { relPath: 'src/assets/industry/bg/image 12.png', maxWidth: 600 },
-  { relPath: 'src/assets/logo_forte_new_transparent.png', maxWidth: 300 },
-  { relPath: 'src/assets/logo.png', maxWidth: 150 },
-  { relPath: 'src/assets/blog/boardroom_meeting.png', maxWidth: 600 },
-  { relPath: 'src/assets/blog/cloud_migration.png', maxWidth: 600 },
-  { relPath: 'src/assets/blog/cybersecurity_trends.png', maxWidth: 600 },
-  { relPath: 'src/assets/meeting_room_hologram.jpg', maxWidth: 600 },
-  { relPath: 'src/assets/blog/it_strategies.png', maxWidth: 600 },
+  { relPath: 'src/assets/uploaded-commitment-team.png', maxWidth: 400 },
+  { relPath: 'src/assets/feature-graphic.png', maxWidth: 400 },
+  { relPath: 'src/assets/about_ai_boardroom.png', maxWidth: 400 },
+  { relPath: 'src/assets/case-studies/cloud_optimization.png', maxWidth: 350 },
+  { relPath: 'src/assets/case-studies/network_security.png', maxWidth: 350 },
+  { relPath: 'src/assets/case-studies/crm_success.png', maxWidth: 350 },
+  { relPath: 'src/assets/case-studies/data_migration.png', maxWidth: 350 },
+  { relPath: 'src/assets/industry/bg/image 5.png', maxWidth: 400 },
+  { relPath: 'src/assets/industry/bg/image 8.png', maxWidth: 400 },
+  { relPath: 'src/assets/industry/bg/image 3.png', maxWidth: 400 },
+  { relPath: 'src/assets/industry/bg/image 4.png', maxWidth: 400 },
+  { relPath: 'src/assets/industry/bg/image 6.png', maxWidth: 400 },
+  { relPath: 'src/assets/industry/bg/image 7.png', maxWidth: 400 },
+  { relPath: 'src/assets/industry/bg/image 10.png', maxWidth: 400 },
+  { relPath: 'src/assets/industry/bg/image 11.png', maxWidth: 400 },
+  { relPath: 'src/assets/industry/bg/image 12.png', maxWidth: 400 },
+  { relPath: 'src/assets/logo_forte_new_transparent.png', maxWidth: 200 },
+  { relPath: 'src/assets/logo.png', maxWidth: 100 },
+  { relPath: 'src/assets/blog/boardroom_meeting.png', maxWidth: 400 },
+  { relPath: 'src/assets/blog/cloud_migration.png', maxWidth: 400 },
+  { relPath: 'src/assets/blog/cybersecurity_trends.png', maxWidth: 400 },
+  { relPath: 'src/assets/meeting_room_hologram.jpg', maxWidth: 400 },
+  { relPath: 'src/assets/blog/it_strategies.png', maxWidth: 400 },
   { relPath: 'src/assets/uploaded-commitment-female.png', maxWidth: 80 },
   { relPath: 'src/assets/uploaded-commitment-cap.png', maxWidth: 80 },
-  { relPath: 'src/assets/client-reviews/client-1.png', maxWidth: 120 },
-  { relPath: 'src/assets/client-reviews/client-2.png', maxWidth: 120 },
-  { relPath: 'src/assets/client-reviews/client-3.png', maxWidth: 120 },
-  { relPath: 'src/assets/client-reviews/client-4.png', maxWidth: 120 },
-  { relPath: 'src/assets/client-reviews/client-5.png', maxWidth: 120 },
-  { relPath: 'src/assets/uploaded-contact-building-hero.jpg', maxWidth: 600 },
-  { relPath: 'src/assets/uploaded-contact-building.jpg', maxWidth: 600 },
+  { relPath: 'src/assets/client-reviews/client-1.png', maxWidth: 100 },
+  { relPath: 'src/assets/client-reviews/client-2.png', maxWidth: 100 },
+  { relPath: 'src/assets/client-reviews/client-3.png', maxWidth: 100 },
+  { relPath: 'src/assets/client-reviews/client-4.png', maxWidth: 100 },
+  { relPath: 'src/assets/client-reviews/client-5.png', maxWidth: 100 },
+  { relPath: 'src/assets/uploaded-contact-building-hero.jpg', maxWidth: 400 },
+  { relPath: 'src/assets/uploaded-contact-building.jpg', maxWidth: 400 },
 ];
 
 async function optimize() {
@@ -68,7 +68,7 @@ async function optimize() {
       }
 
       await pipeline
-        .webp({ quality: 80 })
+        .webp({ quality: 60 })
         .toFile(outPath);
 
       const originalSize = fs.statSync(fullPath).size;

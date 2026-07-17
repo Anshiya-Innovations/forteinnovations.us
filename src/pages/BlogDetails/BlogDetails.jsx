@@ -1,14 +1,15 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import imgFutureIT from '../../assets/blog/boardroom_meeting.png';
-import imgFutureITMobile from '../../assets/blog/boardroom_meeting-mobile.webp';
-import imgCloudMigration from '../../assets/blog/cloud_migration.png';
-import imgCloudMigrationMobile from '../../assets/blog/cloud_migration-mobile.webp';
-import imgITStrategies from '../../assets/blog/it_strategies.png';
-import imgITStrategiesMobile from '../../assets/blog/it_strategies-mobile.webp';
-import imgCybersecurity from '../../assets/blog/cybersecurity_trends.png';
-import imgCybersecurityMobile from '../../assets/blog/cybersecurity_trends-mobile.webp';
 import './BlogDetails.css';
+
+const imgFutureIT = new URL('../../assets/blog/boardroom_meeting.png', import.meta.url).href;
+const imgFutureITMobile = new URL('../../assets/blog/boardroom_meeting-mobile.webp', import.meta.url).href;
+const imgCloudMigration = new URL('../../assets/blog/cloud_migration.png', import.meta.url).href;
+const imgCloudMigrationMobile = new URL('../../assets/blog/cloud_migration-mobile.webp', import.meta.url).href;
+const imgITStrategies = new URL('../../assets/blog/it_strategies.png', import.meta.url).href;
+const imgITStrategiesMobile = new URL('../../assets/blog/it_strategies-mobile.webp', import.meta.url).href;
+const imgCybersecurity = new URL('../../assets/blog/cybersecurity_trends.png', import.meta.url).href;
+const imgCybersecurityMobile = new URL('../../assets/blog/cybersecurity_trends-mobile.webp', import.meta.url).href;
 
 const blogPostsData = {
   "future-it-for-businesses": {

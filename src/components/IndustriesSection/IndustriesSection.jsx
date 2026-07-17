@@ -1,14 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import bgHealthcare from '../../assets/industry/bg/image 3.png';
-import bgHealthcareMobile from '../../assets/industry/bg/image 3-mobile.webp';
-import bgBanking from '../../assets/industry/bg/image 4.png';
-import bgBankingMobile from '../../assets/industry/bg/image 4-mobile.webp';
-import bgManufacturing from '../../assets/industry/bg/image 5.png';
-import bgManufacturingMobile from '../../assets/industry/bg/image 5-mobile.webp';
-import bgLogistics from '../../assets/industry/bg/image 8.png';
-import bgLogisticsMobile from '../../assets/industry/bg/image 8-mobile.webp';
 import './IndustriesSection.css';
+
+const bgHealthcare = new URL('../../assets/industry/bg/image 3.png', import.meta.url).href;
+const bgHealthcareMobile = new URL('../../assets/industry/bg/image 3-mobile.webp', import.meta.url).href;
+const bgBanking = new URL('../../assets/industry/bg/image 4.png', import.meta.url).href;
+const bgBankingMobile = new URL('../../assets/industry/bg/image 4-mobile.webp', import.meta.url).href;
+const bgManufacturing = new URL('../../assets/industry/bg/image 5.png', import.meta.url).href;
+const bgManufacturingMobile = new URL('../../assets/industry/bg/image 5-mobile.webp', import.meta.url).href;
+const bgLogistics = new URL('../../assets/industry/bg/image 8.png', import.meta.url).href;
+const bgLogisticsMobile = new URL('../../assets/industry/bg/image 8-mobile.webp', import.meta.url).href;
 
 const IndustriesSection = () => {
   const navigate = useNavigate();

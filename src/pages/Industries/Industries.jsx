@@ -17,24 +17,24 @@ import iconRealestate from '../../assets/industry/icon-realestate.png';
 import iconGovernment from '../../assets/industry/icon-government.png';
 
 // Import industry background images
-import bgHealthcare from '../../assets/industry/bg/image 3.png';
-import bgHealthcareMobile from '../../assets/industry/bg/image 3-mobile.webp';
-import bgBanking from '../../assets/industry/bg/image 4.png';
-import bgBankingMobile from '../../assets/industry/bg/image 4-mobile.webp';
-import bgManufacturing from '../../assets/industry/bg/image 5.png';
-import bgManufacturingMobile from '../../assets/industry/bg/image 5-mobile.webp';
-import bgRetail from '../../assets/industry/bg/image 6.png';
-import bgRetailMobile from '../../assets/industry/bg/image 6-mobile.webp';
-import bgEducation from '../../assets/industry/bg/image 7.png';
-import bgEducationMobile from '../../assets/industry/bg/image 7-mobile.webp';
-import bgLogistics from '../../assets/industry/bg/image 8.png';
-import bgLogisticsMobile from '../../assets/industry/bg/image 8-mobile.webp';
-import bgEnergy from '../../assets/industry/bg/image 10.png';
-import bgEnergyMobile from '../../assets/industry/bg/image 10-mobile.webp';
-import bgRealestate2 from '../../assets/industry/bg/image 11.png';
-import bgRealestate2Mobile from '../../assets/industry/bg/image 11-mobile.webp';
-import bgGovernment from '../../assets/industry/bg/image 12.png';
-import bgGovernmentMobile from '../../assets/industry/bg/image 12-mobile.webp';
+const bgHealthcare = new URL('../../assets/industry/bg/image 3.png', import.meta.url).href;
+const bgHealthcareMobile = new URL('../../assets/industry/bg/image 3-mobile.webp', import.meta.url).href;
+const bgBanking = new URL('../../assets/industry/bg/image 4.png', import.meta.url).href;
+const bgBankingMobile = new URL('../../assets/industry/bg/image 4-mobile.webp', import.meta.url).href;
+const bgManufacturing = new URL('../../assets/industry/bg/image 5.png', import.meta.url).href;
+const bgManufacturingMobile = new URL('../../assets/industry/bg/image 5-mobile.webp', import.meta.url).href;
+const bgRetail = new URL('../../assets/industry/bg/image 6.png', import.meta.url).href;
+const bgRetailMobile = new URL('../../assets/industry/bg/image 6-mobile.webp', import.meta.url).href;
+const bgEducation = new URL('../../assets/industry/bg/image 7.png', import.meta.url).href;
+const bgEducationMobile = new URL('../../assets/industry/bg/image 7-mobile.webp', import.meta.url).href;
+const bgLogistics = new URL('../../assets/industry/bg/image 8.png', import.meta.url).href;
+const bgLogisticsMobile = new URL('../../assets/industry/bg/image 8-mobile.webp', import.meta.url).href;
+const bgEnergy = new URL('../../assets/industry/bg/image 10.png', import.meta.url).href;
+const bgEnergyMobile = new URL('../../assets/industry/bg/image 10-mobile.webp', import.meta.url).href;
+const bgRealestate2 = new URL('../../assets/industry/bg/image 11.png', import.meta.url).href;
+const bgRealestate2Mobile = new URL('../../assets/industry/bg/image 11-mobile.webp', import.meta.url).href;
+const bgGovernment = new URL('../../assets/industry/bg/image 12.png', import.meta.url).href;
+const bgGovernmentMobile = new URL('../../assets/industry/bg/image 12-mobile.webp', import.meta.url).href;
 
 import './Industries.css';
 

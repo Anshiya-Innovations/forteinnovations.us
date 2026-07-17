@@ -1,14 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import cloudOpt from '../../assets/case-studies/cloud_optimization.png';
-import cloudOptMobile from '../../assets/case-studies/cloud_optimization-mobile.webp';
-import netSec from '../../assets/case-studies/network_security.png';
-import netSecMobile from '../../assets/case-studies/network_security-mobile.webp';
-import crmSuccess from '../../assets/case-studies/crm_success.png';
-import crmSuccessMobile from '../../assets/case-studies/crm_success-mobile.webp';
-import dataMig from '../../assets/case-studies/data_migration.png';
-import dataMigMobile from '../../assets/case-studies/data_migration-mobile.webp';
 import './CaseStudy.css';
+
+const cloudOpt = new URL('../../assets/case-studies/cloud_optimization.png', import.meta.url).href;
+const cloudOptMobile = new URL('../../assets/case-studies/cloud_optimization-mobile.webp', import.meta.url).href;
+const netSec = new URL('../../assets/case-studies/network_security.png', import.meta.url).href;
+const netSecMobile = new URL('../../assets/case-studies/network_security-mobile.webp', import.meta.url).href;
+const crmSuccess = new URL('../../assets/case-studies/crm_success.png', import.meta.url).href;
+const crmSuccessMobile = new URL('../../assets/case-studies/crm_success-mobile.webp', import.meta.url).href;
+const dataMig = new URL('../../assets/case-studies/data_migration.png', import.meta.url).href;
+const dataMigMobile = new URL('../../assets/case-studies/data_migration-mobile.webp', import.meta.url).href;
 
 const CaseStudy = () => {
   const navigate = useNavigate();
