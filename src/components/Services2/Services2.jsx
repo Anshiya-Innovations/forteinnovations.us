@@ -19,6 +19,8 @@ const Services2 = () => {
     {
       type: "image",
       icon: iconMonitor,
+      width: 48,
+      height: 48,
       title: <>AI Integration &<br />Automation</>,
       description: "Transform your business with AI-powered automation that streamlines workflows, enhances operational efficiency, reduces manual effort, and enables faster, data-driven decision-making across your organization.",
       slug: "ai-integration-automation"
@@ -33,6 +35,8 @@ const Services2 = () => {
     {
       type: "image",
       icon: iconLock,
+      width: 48,
+      height: 48,
       title: <>Cyber Security</>,
       description: "Protect your organization with comprehensive cybersecurity solutions, including threat detection, vulnerability management, endpoint protection, network security, and proactive risk mitigation strategies.",
       slug: "cyber-security"
@@ -40,6 +44,8 @@ const Services2 = () => {
     {
       type: "image",
       icon: iconShieldDoc,
+      width: 48,
+      height: 48,
       title: <>Security<br />Compliance & Audit</>,
       description: "Achieve and maintain regulatory compliance with robust security audits, including SOC 2, ISO 27001, GDPR, and HIPAA compliance frameworks, safeguarding your business from legal and operational risks.",
       slug: "security-compliance-audit"
@@ -47,6 +53,8 @@ const Services2 = () => {
     {
       type: "image",
       icon: iconGearBriefcase,
+      width: 48,
+      height: 48,
       title: <>Business Automations</>,
       description: "Streamline your day-to-day operations by automating repetitive tasks, designing smart workflows, and integrating modern automation tools to boost team productivity and reduce operational costs.",
       slug: "business-automations"
@@ -54,6 +62,8 @@ const Services2 = () => {
     {
       type: "image",
       icon: iconCloud,
+      width: 48,
+      height: 48,
       title: <>Cloud Solutions</>,
       description: "Design, migrate, and scale your workloads on secure, high-performance cloud environments (AWS, Azure, GCP) with reliable infrastructure, disaster recovery, and continuous cost optimization.",
       slug: "cloud-solutions"
@@ -61,6 +71,8 @@ const Services2 = () => {
     {
       type: "image",
       icon: iconCap,
+      width: 44,
+      height: 36,
       title: <>Employee Training Program</>,
       description: "Empower your workforce with specialized, hands-on corporate training in modern technology stacks, including AI, Cloud DevOps, Software Engineering, and SAP systems, to drive in-house innovation.",
       slug: "employee-training-program"
@@ -68,6 +80,8 @@ const Services2 = () => {
     {
       type: "image",
       icon: iconPeople,
+      width: 48,
+      height: 48,
       title: <>Internship for Students</>,
       description: "Provide aspiring tech professionals with real-world project experience, mentor-led guidance, and hands-on training in cutting-edge domains like Agentic AI, full-stack development, and SAP systems.",
       slug: "internship-for-students"
@@ -75,6 +89,8 @@ const Services2 = () => {
     {
       type: "image",
       icon: iconPhone,
+      width: 31,
+      height: 61,
       title: <>Mobile App Development</>,
       description: "Build high-performance, user-friendly, and scalable mobile applications for iOS and Android platforms using native technologies, React Native, or Flutter, optimized for seamless user experiences.",
       slug: "mobile-app-development"
@@ -107,7 +123,7 @@ const Services2 = () => {
               >
                 <div className="service2-icon-wrapper">
                   {service.type === "image" ? (
-                    <img src={service.icon} alt="Service Icon" className="service2-icon-img" />
+                    <img src={service.icon} alt="Service Icon" className="service2-icon-img" width={service.width} height={service.height} />
                   ) : (
                     <span className="service2-icon-text">{service.iconText}</span>
                   )}

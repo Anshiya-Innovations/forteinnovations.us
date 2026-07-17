@@ -3,15 +3,20 @@ import { useParams, Link, useNavigate } from 'react-router-dom';
 
 // Import images from case-studies assets
 import cloudOpt from '../../assets/case-studies/cloud_optimization.png';
+import cloudOptMobile from '../../assets/case-studies/cloud_optimization-mobile.webp';
 import netSec from '../../assets/case-studies/network_security.png';
+import netSecMobile from '../../assets/case-studies/network_security-mobile.webp';
 import crmSuccess from '../../assets/case-studies/crm_success.png';
+import crmSuccessMobile from '../../assets/case-studies/crm_success-mobile.webp';
 import dataMig from '../../assets/case-studies/data_migration.png';
+import dataMigMobile from '../../assets/case-studies/data_migration-mobile.webp';
 
 import './CaseStudyDetails.css';
 
 const caseStudiesData = {
   "cloud-infrastructure-optimization": {
     image: cloudOpt,
+    imageMobile: cloudOptMobile,
     title: "Cloud Infrastructure Optimization",
     subtitle: "How we refactored server provisioning, containerized operations, and optimized cloud workloads to slash monthly expenses by 35%.",
     client: "ScaleTech Solutions",
@@ -36,6 +41,7 @@ const caseStudiesData = {
   },
   "network-security-enhancement": {
     image: netSec,
+    imageMobile: netSecMobile,
     title: "Network Security Enhancement",
     subtitle: "Securing corporate perimeters and deploying next-generation threat intelligence to boost system resilience by 60%.",
     client: "Aero Logistics Corp",
@@ -60,6 +66,7 @@ const caseStudiesData = {
   },
   "crm-integration-success": {
     image: crmSuccess,
+    imageMobile: crmSuccessMobile,
     title: "CRM Integration Success",
     subtitle: "Integrating enterprise CRM systems with legacy SAP databases to drive customer response speed by 40%.",
     client: "Nova Retail Group",
@@ -84,6 +91,7 @@ const caseStudiesData = {
   },
   "real-time-data-migration": {
     image: dataMig,
+    imageMobile: dataMigMobile,
     title: "Real-time Data Migration",
     subtitle: "Migrating over 50 Terabytes of historical transactional records to cloud-native warehousing with zero operational downtime.",
     client: "Apex Financial Markets",
@@ -161,7 +169,10 @@ const CaseStudyDetails = () => {
           <div className="case-details-main">
             {/* Featured Image */}
             <div className="case-main-image-block">
-              <img src={caseItem.image} alt={caseItem.title} className="case-main-image" />
+              <picture>
+                <source media="(max-width: 768px)" srcSet={caseItem.imageMobile} type="image/webp" />
+                <img src={caseItem.image} alt={caseItem.title} className="case-main-image" width="577" height="267" />
+              </picture>
             </div>
 
             {/* Challenge Card */}
@@ -267,7 +278,10 @@ const CaseStudyDetails = () => {
               <div className="recommendations-list">
                 {otherCases.slice(0, 2).map((item, idx) => (
                   <Link key={idx} to={`/case-study/${item.slug}`} className="recommend-card">
-                    <img src={item.image} alt={item.title} className="recommend-card-img" />
+                    <picture>
+                      <source media="(max-width: 768px)" srcSet={item.imageMobile} type="image/webp" />
+                      <img src={item.image} alt={item.title} className="recommend-card-img" width="577" height="267" />
+                    </picture>
                     <div className="recommend-card-content">
                       <span className="recommend-category">{item.industry}</span>
                       <h5 className="recommend-title">{item.title}</h5>
@@ -296,7 +310,10 @@ const CaseStudyDetails = () => {
                   className={`all-grid-card ${isCurrent ? 'active-card' : ''}`}
                 >
                   <div className="all-grid-img-wrapper">
-                    <img src={item.image} alt={item.title} className="all-grid-img" />
+                    <picture>
+                      <source media="(max-width: 768px)" srcSet={item.imageMobile} type="image/webp" />
+                      <img src={item.image} alt={item.title} className="all-grid-img" width="577" height="267" />
+                    </picture>
                     {isCurrent && <span className="all-grid-active-badge">Current</span>}
                   </div>
                   <div className="all-grid-content">

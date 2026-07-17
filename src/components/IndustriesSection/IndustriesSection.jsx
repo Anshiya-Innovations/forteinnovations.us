@@ -1,9 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import bgHealthcare from '../../assets/industry/bg/image 3.png';
+import bgHealthcareMobile from '../../assets/industry/bg/image 3-mobile.webp';
 import bgBanking from '../../assets/industry/bg/image 4.png';
+import bgBankingMobile from '../../assets/industry/bg/image 4-mobile.webp';
 import bgManufacturing from '../../assets/industry/bg/image 5.png';
+import bgManufacturingMobile from '../../assets/industry/bg/image 5-mobile.webp';
 import bgLogistics from '../../assets/industry/bg/image 8.png';
+import bgLogisticsMobile from '../../assets/industry/bg/image 8-mobile.webp';
 import './IndustriesSection.css';
 
 const IndustriesSection = () => {
@@ -13,18 +17,22 @@ const IndustriesSection = () => {
     {
       title: "Manufacturing",
       bgImage: bgManufacturing,
+      bgImageMobile: bgManufacturingMobile,
     },
     {
       title: "FinTech",
       bgImage: bgBanking,
+      bgImageMobile: bgBankingMobile,
     },
     {
       title: "Healthcare",
       bgImage: bgHealthcare,
+      bgImageMobile: bgHealthcareMobile,
     },
     {
       title: "Logistics",
       bgImage: bgLogistics,
+      bgImageMobile: bgLogisticsMobile,
     }
   ];
 
@@ -61,7 +69,10 @@ const IndustriesSection = () => {
             >
               <div 
                 className="industry-section-card-bg" 
-                style={{ backgroundImage: `url("${card.bgImage}")` }}
+                style={{ 
+                  '--bg-desktop': `url("${card.bgImage}")`, 
+                  '--bg-mobile': `url("${card.bgImageMobile}")` 
+                }}
               ></div>
               <div className="industry-section-card-overlay"></div>
               <div className="industry-section-card-content">

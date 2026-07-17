@@ -1,5 +1,6 @@
 import React from 'react';
 import meetingRoomHologram from '../../assets/meeting_room_hologram.jpg';
+import meetingRoomHologramMobile from '../../assets/meeting_room_hologram-mobile.webp';
 import './Hero.css';
 
 const Hero = ({ onCtaClick }) => {
@@ -35,11 +36,17 @@ const Hero = ({ onCtaClick }) => {
         </div>
         
         <div className="hero-image-wrapper">
-          <img 
-            src={meetingRoomHologram} 
-            alt="Forte Innovations Meeting Room Hologram" 
-            className="hero-dashboard-img"
-          />
+          <picture>
+            <source media="(max-width: 768px)" srcSet={meetingRoomHologramMobile} type="image/webp" />
+            <img 
+              src={meetingRoomHologram} 
+              alt="Forte Innovations Meeting Room Hologram" 
+              className="hero-dashboard-img"
+              fetchPriority="high"
+              width="735"
+              height="490"
+            />
+          </picture>
         </div>
       </div>
     </section>

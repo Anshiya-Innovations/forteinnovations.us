@@ -13,14 +13,14 @@ import techAws from '../../assets/tech/tech-aws.png';
 
 const Technologies = () => {
   const techStack = [
-    { name: "SAP", logo: techSap },
-    { name: "AI / ML", logo: techRobot },
-    { name: "CLOUD", logo: techCloud },
-    { name: "MICROSOFT AZURE", logo: techAzure },
-    { name: "PYTHON", logo: techPython },
-    { name: "JAVA", logo: techJava },
-    { name: "REACT", logo: techReact },
-    { name: "AWS", logo: techAws }
+    { name: "SAP", logo: techSap, width: 74, height: 71 },
+    { name: "AI / ML", logo: techRobot, width: 44, height: 44 },
+    { name: "CLOUD", logo: techCloud, width: 44, height: 36 },
+    { name: "MICROSOFT AZURE", logo: techAzure, width: 42, height: 42 },
+    { name: "PYTHON", logo: techPython, width: 36, height: 36 },
+    { name: "JAVA", logo: techJava, width: 28, height: 37 },
+    { name: "REACT", logo: techReact, width: 42, height: 38 },
+    { name: "AWS", logo: techAws, width: 48, height: 29 }
   ];
 
   return (
@@ -36,6 +36,8 @@ const Technologies = () => {
                   src={tech.logo} 
                   alt={`${tech.name} Logo`} 
                   className={`tech-logo-img ${tech.name === "AI / ML" ? "tech-logo-robot" : ""}`} 
+                  width={tech.width}
+                  height={tech.height}
                 />
               </div>
               <span className="tech-logo-name">{tech.name}</span>

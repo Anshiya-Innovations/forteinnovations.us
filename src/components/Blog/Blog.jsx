@@ -1,9 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import imgFutureIT from '../../assets/blog/boardroom_meeting.png';
+import imgFutureITMobile from '../../assets/blog/boardroom_meeting-mobile.webp';
 import imgCloudMigration from '../../assets/blog/cloud_migration.png';
+import imgCloudMigrationMobile from '../../assets/blog/cloud_migration-mobile.webp';
 import imgITStrategies from '../../assets/blog/it_strategies.png';
+import imgITStrategiesMobile from '../../assets/blog/it_strategies-mobile.webp';
 import imgCybersecurity from '../../assets/blog/cybersecurity_trends.png';
+import imgCybersecurityMobile from '../../assets/blog/cybersecurity_trends-mobile.webp';
 import './Blog.css';
 
 const Blog = () => {
@@ -32,7 +36,10 @@ const Blog = () => {
               }}
             >
               <div className="blog-img-container-tall">
-                <img src={imgFutureIT} alt="The Future of IT for Businesses" className="blog-img-tall" />
+                <picture>
+                  <source media="(max-width: 768px)" srcSet={imgFutureITMobile} type="image/webp" />
+                  <img src={imgFutureIT} alt="The Future of IT for Businesses" className="blog-img-tall" width="736" height="736" />
+                </picture>
                 <span className="blog-badge-overlay">Business</span>
               </div>
               <div className="blog-content-tall">
@@ -56,7 +63,10 @@ const Blog = () => {
                 }}
               >
                 <div className="blog-img-container-small">
-                  <img src={imgCloudMigration} alt="Cloud Migration Best Practices" className="blog-img-small" />
+                  <picture>
+                    <source media="(max-width: 768px)" srcSet={imgCloudMigrationMobile} type="image/webp" />
+                    <img src={imgCloudMigration} alt="Cloud Migration Best Practices" className="blog-img-small" width="735" height="490" />
+                  </picture>
                   <span className="blog-badge-overlay">Technology</span>
                 </div>
                 <div className="blog-content-small">
@@ -75,7 +85,10 @@ const Blog = () => {
                 }}
               >
                 <div className="blog-img-container-small">
-                  <img src={imgITStrategies} alt="IT Strategies That Scale" className="blog-img-small" />
+                  <picture>
+                    <source media="(max-width: 768px)" srcSet={imgITStrategiesMobile} type="image/webp" />
+                    <img src={imgITStrategies} alt="IT Strategies That Scale" className="blog-img-small" width="736" height="412" />
+                  </picture>
                   <span className="blog-badge-overlay">IT Solution</span>
                 </div>
                 <div className="blog-content-small">
@@ -97,7 +110,10 @@ const Blog = () => {
                 }}
               >
                 <div className="blog-img-container-horizontal">
-                  <img src={imgCybersecurity} alt="Cybersecurity Trends Every Business Should Know" className="blog-img-horizontal" />
+                  <picture>
+                    <source media="(max-width: 768px)" srcSet={imgCybersecurityMobile} type="image/webp" />
+                    <img src={imgCybersecurity} alt="Cybersecurity Trends Every Business Should Know" className="blog-img-horizontal" width="735" height="385" />
+                  </picture>
                   <span className="blog-badge-overlay">Cybersecurity</span>
                 </div>
                 <div className="blog-content-horizontal">

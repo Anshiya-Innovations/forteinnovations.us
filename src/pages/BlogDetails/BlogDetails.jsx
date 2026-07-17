@@ -1,9 +1,13 @@
 import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import imgFutureIT from '../../assets/blog/boardroom_meeting.png';
+import imgFutureITMobile from '../../assets/blog/boardroom_meeting-mobile.webp';
 import imgCloudMigration from '../../assets/blog/cloud_migration.png';
+import imgCloudMigrationMobile from '../../assets/blog/cloud_migration-mobile.webp';
 import imgITStrategies from '../../assets/blog/it_strategies.png';
+import imgITStrategiesMobile from '../../assets/blog/it_strategies-mobile.webp';
 import imgCybersecurity from '../../assets/blog/cybersecurity_trends.png';
+import imgCybersecurityMobile from '../../assets/blog/cybersecurity_trends-mobile.webp';
 import './BlogDetails.css';
 
 const blogPostsData = {
@@ -14,6 +18,9 @@ const blogPostsData = {
     readTime: "6 min read",
     author: "Forte Insights Team",
     image: imgFutureIT,
+    imageMobile: imgFutureITMobile,
+    width: "736",
+    height: "736",
     intro: "The business landscape is transforming at a rapid pace, driven by artificial intelligence, cloud advancements, and zero-trust security structures. Understanding the trends defining the future of corporate IT is key to building competitive advantages. At Forte Innovations, we partner with enterprises to turn disruptive technologies into operational milestones.",
     sections: [
       {
@@ -38,6 +45,9 @@ const blogPostsData = {
     readTime: "5 min read",
     author: "Forte Cloud Operations",
     image: imgCloudMigration,
+    imageMobile: imgCloudMigrationMobile,
+    width: "735",
+    height: "490",
     intro: "Migrating legacy enterprise databases and software suites to the cloud is a critical step in modernizing infrastructure. However, a 'lift-and-shift' approach without proper planning often results in high costs and operational disruptions. Here is our architectural guide to ensuring a seamless, secure cloud migration.",
     sections: [
       {
@@ -62,6 +72,9 @@ const blogPostsData = {
     readTime: "5 min read",
     author: "Forte Consulting Group",
     image: imgITStrategies,
+    imageMobile: imgITStrategiesMobile,
+    width: "736",
+    height: "412",
     intro: "Scaling an organization requires systems and IT architectures that can grow alongside business demand. Standardizing software environments, optimizing database structures, and utilizing analytics are key strategies to scale operations sustainably.",
     sections: [
       {
@@ -86,6 +99,9 @@ const blogPostsData = {
     readTime: "7 min read",
     author: "Forte Security Operations",
     image: imgCybersecurity,
+    imageMobile: imgCybersecurityMobile,
+    width: "735",
+    height: "385",
     intro: "In a digital-first economy, security is not just an IT metric; it is the cornerstone of brand reputation and digital trust. Guarding enterprise assets requires continuous network audits, automated threat detection APIs, and best practices for securing database integrity.",
     sections: [
       {
@@ -155,7 +171,10 @@ const BlogDetails = () => {
           {/* Left Column: Post Content */}
           <article className="blog-main-content">
             <div className="blog-main-image-wrapper">
-              <img src={post.image} alt={post.title} className="blog-main-image" />
+              <picture>
+                <source media="(max-width: 768px)" srcSet={post.imageMobile} type="image/webp" />
+                <img src={post.image} alt={post.title} className="blog-main-image" width={post.width} height={post.height} />
+              </picture>
             </div>
             
             <p className="blog-lead-paragraph">

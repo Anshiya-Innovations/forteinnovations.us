@@ -88,6 +88,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  background-image: var(--bg-desktop);
   background-size: cover;
   background-position: center;
   transition: transform 0.6s ease;
@@ -159,6 +160,14 @@
   
   .industry-section-card {
     height: 360px;
+  }
+
+  .industry-section-card-bg {
+    background-image: var(--bg-mobile) !important;
+  }
+
+  .industry-view-all-btn {
+    background-color: #0050d1;
   }
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import aboutAiBoardroom from '../../assets/about_ai_boardroom.png';
+import aboutAiBoardroomMobile from '../../assets/about_ai_boardroom-mobile.webp';
 import './About.css';
 
 const About = () => {
@@ -12,11 +13,16 @@ const About = () => {
         <div className="grid-2 about-grid-content">
           {/* Left Side: High Quality Image */}
           <div className="about-image-wrapper">
-            <img 
-              src={aboutAiBoardroom} 
-              alt="Forte Innovations AI Boardroom Meeting" 
-              className="about-img-boardroom"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet={aboutAiBoardroomMobile} type="image/webp" />
+              <img 
+                src={aboutAiBoardroom} 
+                alt="Forte Innovations AI Boardroom Meeting" 
+                className="about-img-boardroom"
+                width="597"
+                height="335"
+              />
+            </picture>
           </div>
 
           {/* Right Side: Text details, bullets and Stats */}

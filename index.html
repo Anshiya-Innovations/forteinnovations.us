@@ -6,8 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Forte Innovations - AI Innovation That Moves Business" />
     <title>Forte Innovations</title>
-    <!-- Font Awesome CDN for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <!-- Preconnect to CDNs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload Fonts & Icons -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" />
+
+    <!-- Preload Mobile LCP Image -->
+    <link rel="preload" fetchpriority="high" as="image" href="/src/assets/meeting_room_hologram-mobile.webp" media="(max-width: 768px)" type="image/webp" />
+
+    <!-- Load Google Fonts Asynchronously -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" media="print" onload="this.media='all'" />
+    
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" />
+    </noscript>
   </head>
   <body style="background-color: #000000;">
     <div id="root"></div>
@@ -16,12 +30,32 @@
     <script type="text/javascript">
     var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
     (function(){
-    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-    s1.async=true;
-    s1.src='https://embed.tawk.to/6a57359cfac3bf1d464b583f/1jtiair4b';
-    s1.charset='UTF-8';
-    s1.setAttribute('crossorigin','*');
-    s0.parentNode.insertBefore(s1,s0);
+      function loadTawk() {
+        if (window.tawkLoaded) return;
+        window.tawkLoaded = true;
+        
+        // Remove event listeners to clean up
+        window.removeEventListener('scroll', loadTawk);
+        window.removeEventListener('touchstart', loadTawk);
+        clearTimeout(tawkTimeout);
+
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/6a57359cfac3bf1d464b583f/1jtiair4b';
+        s1.charset='UTF-8';
+        s0.parentNode.insertBefore(s1,s0);
+      }
+
+      var tawkTimeout;
+      // If mobile view, lazy-load Tawk.to on interaction or delay
+      if (window.innerWidth <= 768) {
+        window.addEventListener('scroll', loadTawk, { passive: true });
+        window.addEventListener('touchstart', loadTawk, { passive: true });
+        tawkTimeout = setTimeout(loadTawk, 5000); // 5s fallback
+      } else {
+        // Desktop loads immediately
+        loadTawk();
+      }
     })();
     </script>
     <!--End of Tawk.to Script-->

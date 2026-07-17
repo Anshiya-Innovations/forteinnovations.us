@@ -124,4 +124,12 @@
   .case-study-img-wrapper {
     margin-bottom: 16px;
   }
+
+  .case-study-read-more {
+    color: #1d4ed8;
+  }
+
+  .case-study-card-desc {
+    color: #334155;
+  }
 }

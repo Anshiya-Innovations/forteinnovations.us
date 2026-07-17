@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import featureGraphic from '../../assets/feature-graphic.png';
+import featureGraphicMobile from '../../assets/feature-graphic-mobile.webp';
 import './Appointment.css';
 
 const countryCodes = [
@@ -126,11 +127,16 @@ const Appointment = () => {
             Ready to discuss your next big project? Our experts are standing by to provide you with a detailed consultation and roadmap.
           </p>
           <div className="appointment-image-wrapper">
-            <img 
-              src={featureGraphic} 
-              alt="Collaborative IT Meeting" 
-              className="appointment-img"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet={featureGraphicMobile} type="image/webp" />
+              <img 
+                src={featureGraphic} 
+                alt="Collaborative IT Meeting" 
+                className="appointment-img"
+                width="664"
+                height="404"
+              />
+            </picture>
           </div>
         </div>
 
@@ -190,6 +196,7 @@ const Appointment = () => {
                       value={formData.countryCode}
                       onChange={handleInputChange}
                       className="appointment-country-select"
+                      aria-label="Country Code"
                     >
                       {countryCodes.map((item, idx) => (
                         <option key={idx} value={item.code}>

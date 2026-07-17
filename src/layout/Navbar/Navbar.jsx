@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import logoImg from '../../assets/logo_forte_new_transparent.png';
+import logoImgMobile from '../../assets/logo_forte_new_transparent-mobile.webp';
 import './Navbar.css';
 
 const getCategorySlug = (title) => {
@@ -369,7 +370,10 @@ const Navbar = () => {
             setActiveItem('home');
           }}
         >
-          <img src={transparentLogo} alt="Forte Innovations Logo" className='navlogo' />
+          <picture>
+            <source media="(max-width: 768px)" srcSet={logoImgMobile} type="image/webp" />
+            <img src={transparentLogo} alt="Forte Innovations Logo" className='navlogo' width="1024" height="316" />
+          </picture>
         </Link>
  
         <button className="navbar-toggle" onClick={toggleMenu} aria-label="Toggle Navigation">

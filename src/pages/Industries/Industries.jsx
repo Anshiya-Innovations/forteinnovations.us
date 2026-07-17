@@ -18,14 +18,23 @@ import iconGovernment from '../../assets/industry/icon-government.png';
 
 // Import industry background images
 import bgHealthcare from '../../assets/industry/bg/image 3.png';
+import bgHealthcareMobile from '../../assets/industry/bg/image 3-mobile.webp';
 import bgBanking from '../../assets/industry/bg/image 4.png';
+import bgBankingMobile from '../../assets/industry/bg/image 4-mobile.webp';
 import bgManufacturing from '../../assets/industry/bg/image 5.png';
+import bgManufacturingMobile from '../../assets/industry/bg/image 5-mobile.webp';
 import bgRetail from '../../assets/industry/bg/image 6.png';
+import bgRetailMobile from '../../assets/industry/bg/image 6-mobile.webp';
 import bgEducation from '../../assets/industry/bg/image 7.png';
+import bgEducationMobile from '../../assets/industry/bg/image 7-mobile.webp';
 import bgLogistics from '../../assets/industry/bg/image 8.png';
+import bgLogisticsMobile from '../../assets/industry/bg/image 8-mobile.webp';
 import bgEnergy from '../../assets/industry/bg/image 10.png';
+import bgEnergyMobile from '../../assets/industry/bg/image 10-mobile.webp';
 import bgRealestate2 from '../../assets/industry/bg/image 11.png';
+import bgRealestate2Mobile from '../../assets/industry/bg/image 11-mobile.webp';
 import bgGovernment from '../../assets/industry/bg/image 12.png';
+import bgGovernmentMobile from '../../assets/industry/bg/image 12-mobile.webp';
 
 import './Industries.css';
 
@@ -57,54 +66,63 @@ const Industries = () => {
     {
       icon: iconHealthcare,
       bgImage: bgHealthcare,
+      bgImageMobile: bgHealthcareMobile,
       title: "Healthcare",
       description: "Telemedicine and HIPAA-compliant data systems for modern medical providers."
     },
     {
       icon: iconBanking,
       bgImage: bgBanking,
+      bgImageMobile: bgBankingMobile,
       title: "Banking & Finance",
       description: "Secure fintech, fraud detection, and robust digital banking infrastructures."
     },
     {
       icon: iconManufacturing,
       bgImage: bgManufacturing,
+      bgImageMobile: bgManufacturingMobile,
       title: "Manufacturing",
       description: "Smart factory automation and predictive maintenance powered by IoT."
     },
     {
       icon: iconRetail,
       bgImage: bgRetail,
+      bgImageMobile: bgRetailMobile,
       title: "Retail & E-Commerce",
       description: "Scalable marketplaces and AI-driven shopping experiences for global brands."
     },
     {
       icon: iconEducation,
       bgImage: bgEducation,
+      bgImageMobile: bgEducationMobile,
       title: "Education",
       description: "Custom LMS platforms and digital tools for effective remote learning."
     },
     {
       icon: iconLogistics,
       bgImage: bgLogistics,
+      bgImageMobile: bgLogisticsMobile,
       title: "Logistics",
       description: "End-to-end tracking and fleet management for seamless global distribution."
     },
     {
       icon: iconEnergy,
       bgImage: bgGovernment,
+      bgImageMobile: bgGovernmentMobile,
       title: "Energy & Utilities",
       description: "Smart grid monitoring and renewable energy management for a sustainable future."
     },
     {
       icon: iconRealestate,
       bgImage: bgRealestate2,
+      bgImageMobile: bgRealestate2Mobile,
       title: "Real Estate",
       description: "PropTech solutions featuring virtual tours and automated property management."
     },
     {
       icon: iconGovernment,
       bgImage: bgEnergy,
+      bgImageMobile: bgEnergyMobile,
       title: "Government",
       description: "Digital governance, secure public records, and citizen-centric service portals."
     }
@@ -185,7 +203,10 @@ const Industries = () => {
               >
                 <div 
                   className="industry-card-bg" 
-                  style={{ backgroundImage: `url("${ind.bgImage}")` }}
+                  style={{ 
+                    '--bg-desktop': `url("${ind.bgImage}")`, 
+                    '--bg-mobile': `url("${ind.bgImageMobile}")` 
+                  }}
                 ></div>
                 <div className="industry-card-overlay"></div>
                 <div className="industry-card-content">

@@ -180,4 +180,8 @@
   .commitment-hero-container, .commitment-cards-container {
     grid-template-columns: 1fr;
   }
+
+  .commitment-card-btn {
+    background-color: #0050d1;
+  }
 }

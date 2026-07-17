@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 
 // Import footer images
 import logoImg from '../../assets/logo_forte_dark_footer_new.jpg';
-import iconLinkedin from '../../assets/footer-linkedin.png';
-import iconFacebook from '../../assets/footer-facebook.png';
-import iconInstagram from '../../assets/footer-instagram.png';
-import iconYoutube from '../../assets/footer-youtube.png';
+import iconLinkedin from '../../assets/footer-linkedin-v2.png';
+import iconFacebook from '../../assets/footer-facebook-v2.png';
+import iconInstagram from '../../assets/footer-instagram-v2.png';
+import iconYoutube from '../../assets/footer-youtube-v2.png';
 import btnNewsletter from '../../assets/footer-newsletter-btn.png';
 
 import './Footer.css';
@@ -52,30 +52,30 @@ const Footer = () => {
         {/* Column 1: Brand Info & Socials */}
         <div className="footer-brand-col">
           <Link to="/" className="footer-logo" onClick={handleScrollToTop}>
-            <img src={logoImg} alt="Forte Innovations Logo" className="footer-logo-img" />
+            <img src={logoImg} alt="Forte Innovations Logo" className="footer-logo-img" width="320" height="145" />
           </Link>
           <p className="footer-description">
             Empowering enterprises with innovative technology solutions that accelerate digital transformation, optimize business performance, and strengthen security in an ever-evolving digital landscape.
           </p>
           <div className="footer-socials-row">
-            <a href="https://www.linkedin.com/posts/forte-innovations_digitaltransformation-artificialintelligence-activity-7479060323094712320-XqpU?utm_source=share&utm_medium=member_android&rcm=ACoAAECz-GcBQ3DaJkAbiQKlfCiLxJZ2XYxFvpE" target="_blank" rel="noopener noreferrer" className="footer-social-link">
-              <img src={iconLinkedin} alt="LinkedIn Icon" className="footer-social-icon" />
+            <a href="https://www.linkedin.com/company/forte-innovations1/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+              <img src={iconLinkedin} alt="LinkedIn Icon" className="footer-social-icon" width="26" height="26" />
             </a>
-            <a href="https://www.facebook.com/profile.php?id=61591383160568" target="_blank" rel="noopener noreferrer" className="footer-social-link">
-              <img src={iconFacebook} alt="Facebook Icon" className="footer-social-icon" />
+            <a href="https://www.facebook.com/profile.php?id=61591348392051" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+              <img src={iconFacebook} alt="Facebook Icon" className="footer-social-icon" width="26" height="26" />
             </a>
-            <a href="https://www.instagram.com/forteinnovations/?__pwa=1#" target="_blank" rel="noopener noreferrer" className="footer-social-link">
-              <img src={iconInstagram} alt="Instagram Icon" className="footer-social-icon" />
+            <a href="https://www.instagram.com/forte_innovations/" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+              <img src={iconInstagram} alt="Instagram Icon" className="footer-social-icon" width="28" height="28" />
             </a>
-            <a href="https://youtube.com/@forteinnovations?si=7p6KQh7JljZCy4zA" target="_blank" rel="noopener noreferrer" className="footer-social-link">
-              <img src={iconYoutube} alt="YouTube Icon" className="footer-social-icon" />
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" className="footer-social-link">
+              <img src={iconYoutube} alt="YouTube Icon" className="footer-social-icon" width="28" height="20" />
             </a>
           </div>
         </div>
 
         {/* Column 2: Company */}
         <div className="footer-links-col">
-          <h4 className="footer-title">COMPANY</h4>
+          <h3 className="footer-title">COMPANY</h3>
           <ul className="footer-links">
             <li><Link to="/about-us" onClick={handleScrollToTop}>About Us</Link></li>
             <li><Link to="/career" onClick={handleScrollToTop}>Careers</Link></li>
@@ -86,7 +86,7 @@ const Footer = () => {
 
         {/* Column 3: Service Links */}
         <div className="footer-links-col">
-          <h4 className="footer-title">SERVICE LINKS</h4>
+          <h3 className="footer-title">SERVICE LINKS</h3>
           <ul className="footer-links">
             <li><Link to="/service-details/ai-integration-automation" onClick={handleScrollToTop}>AI Integration & Automation</Link></li>
             <li><Link to="/service-details/sap-btp" onClick={handleScrollToTop}>SAP BTP</Link></li>
@@ -98,7 +98,7 @@ const Footer = () => {
 
         {/* Column 4: Newsletter */}
         <div className="footer-links-col footer-newsletter-col">
-          <h4 className="footer-title">NEWSLETTER</h4>
+          <h3 className="footer-title">NEWSLETTER</h3>
           <p className="footer-newsletter-text">
             Subscribe to our newsletter for the latest tech updates and strategic business insights.
           </p>
@@ -112,7 +112,7 @@ const Footer = () => {
               required 
             />
             <button type="submit" className="footer-newsletter-btn-wrapper">
-              <img src={btnNewsletter} alt="Submit Arrow" className="footer-newsletter-btn-img" />
+              <img src={btnNewsletter} alt="Submit Arrow" className="footer-newsletter-btn-img" width="52" height="38" />
             </button>
           </form>
         </div>

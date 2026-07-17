@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import contactBuilding from '../../assets/uploaded-contact-building-hero.png';
+import contactBuilding from '../../assets/uploaded-contact-building-hero.jpg';
+import contactBuildingMobile from '../../assets/uploaded-contact-building-hero-mobile.webp';
 import badgeCheck from '../../assets/contact-badge-check.png';
-import contactMockup from '../../assets/uploaded-contact-building.png';
+import contactMockup from '../../assets/uploaded-contact-building.jpg';
+import contactMockupMobile from '../../assets/uploaded-contact-building-mobile.webp';
 
 // Import Info icons
 import iconMail from '../../assets/contact-icon-mail.png';
@@ -147,11 +149,16 @@ const Contact = () => {
           {/* Right Column: Building night mockup with overlap card */}
           <div className="contact-hero-right">
             <div className="contact-image-card-wrapper">
-              <img 
-                src={contactBuilding} 
-                alt="Operations office building at night" 
-                className="contact-building-img"
-              />
+              <picture>
+                <source media="(max-width: 768px)" srcSet={contactBuildingMobile} type="image/webp" />
+                <img 
+                  src={contactBuilding} 
+                  alt="Operations office building at night" 
+                  className="contact-building-img"
+                  width="897"
+                  height="1024"
+                />
+              </picture>
               <div className="contact-floating-uptime-card">
                 <div className="contact-uptime-icon-box">
                   <img src={badgeCheck} alt="Checkmark seal" className="contact-uptime-icon" />
@@ -172,11 +179,11 @@ const Contact = () => {
           {/* Card 1: Email */}
           <div className="contact-info-card">
             <div className="contact-card-icon-box">
-              <img src={iconMail} alt="Envelope Icon" className="contact-card-icon" />
+              <img src={iconLoc} alt="Envelope Icon" className="contact-card-icon" />
             </div>
             <h3 className="contact-card-title">Email Us</h3>
             <p className="contact-card-desc">Our support team is here to help you.</p>
-            <a href="mailto:contact@forte.com" className="contact-card-link">contact@forteinnovations.com</a>
+            <a href="mailto:contact@forteinnovations.us" className="contact-card-link">contact@forteinnovations.us</a>
           </div>
 
           {/* Card 2: Call */}
@@ -185,14 +192,14 @@ const Contact = () => {
               <img src={iconPhone} alt="Phone Icon" className="contact-card-icon" />
             </div>
             <h3 className="contact-card-title">Call Us</h3>
-            <p className="contact-card-desc">Monday - Friday, 9am to 6pm IST.</p>
-            <a href="tel:+919003186479" className="contact-card-link">+91-9003186479</a>
+            <p className="contact-card-desc">Monday - Friday, 9am to 6pm ET.</p>
+            <a href="tel:+17323392828" className="contact-card-link">+1-732-339-2828</a>
           </div>
 
           {/* Card 3: Location */}
           <div className="contact-info-card">
             <div className="contact-card-icon-box">
-              <img src={iconLoc} alt="Location Pin Icon" className="contact-card-icon HQicon" />
+              <img src={iconMail} alt="Location Pin Icon" className="contact-card-icon" />
             </div>
             <h3 className="contact-card-title">Headquarters</h3>
             <p className="contact-card-desc">100 Franklin Square Drive, Somerset, New Jersey - 08873</p>
@@ -248,6 +255,7 @@ const Contact = () => {
                       name="countryCode" 
                       defaultValue="+1"
                       className="contact-country-select"
+                      aria-label="Country Code"
                     >
                       {countryCodes.map((item, idx) => (
                         <option key={idx} value={item.code}>
@@ -295,11 +303,16 @@ const Contact = () => {
 
           {/* Right Column: Contact Mockup Image */}
           <div className="contact-form-block-right">
-            <img 
-              src={contactMockup} 
-              alt="Contact us map and main office mockup" 
-              className="contact-mockup-img"
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet={contactMockupMobile} type="image/webp" />
+              <img 
+                src={contactMockup} 
+                alt="Contact us map and main office mockup" 
+                className="contact-mockup-img"
+                width="1024"
+                height="931"
+              />
+            </picture>
           </div>
         </div>
       </section>
